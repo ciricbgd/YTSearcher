@@ -1,0 +1,54 @@
+@import '../../vars';
+.ytVideo {
+  h2 {
+    margin-bottom: 10px;
+  }
+
+  h5 {
+    margin-bottom: 35px;
+    * {
+      color: $color1;
+    }
+
+    a {
+      text-decoration: underline;
+      float: left;
+    }
+    span {
+      float: right;
+      opacity: 0.5;
+    }
+  }
+
+  iframe {
+    width: 100%;
+    height: 360px;
+    border: 5px solid $bgcolor2;
+  }
+
+  .videoDescription {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    max-height: 200px;
+
+    p {
+      white-space: pre-wrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      //height: 100%;
+      width: calc(100% - 30px);
+    }
+
+    .colapseBtn {
+      width: 20px;
+      height: 20px;
+      background: url('../img/icon/down-arrow.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      border: none;
+      transform: rotate(-90deg);
+    }
+  }
+}

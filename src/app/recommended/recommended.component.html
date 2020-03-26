@@ -1,0 +1,14 @@
+<div class="recommendedHolder" *ngIf="recommended">
+  <h2>Recommended</h2>
+  <hr />
+  <div class="recommend" *ngFor="let recommend of recommended | async">
+    <p>{{ recommend?.snippet?.title }}</p>
+    <img
+      [src]="recommend?.snippet?.thumbnails.medium.url"
+      [alt]="recommend?.snippet?.title"
+      width="auto"
+      heigt="100px"
+      (click)="recommendedClick(recommend.id.videoId)"
+    />
+  </div>
+</div>

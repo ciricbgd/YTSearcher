@@ -1,0 +1,57 @@
+// -----------------------------  VARS ---------------------------------------------------------------------------
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,800&display=swap');
+// -------- Colors -----------------------------------------------------------
+
+$color1: #2c2c2c;
+$color2: white;
+$color3: rgb(255, 117, 117);
+
+$bgcolor1: white;
+$bgcolor2: rgb(255, 117, 117);
+$bgcolor3: rgb(117, 149, 255);
+
+//!-------- Colors -----------------------------------------------------------
+
+// -------- Fonts -----------------------------------------------------------
+
+$font1: 'Nunito Sans', sans-serif;
+
+//!-------- Fonts -----------------------------------------------------------
+
+// -------- Responsive design -----------------------------------------------------------
+
+$s: 320px;
+$m: 480px;
+$l: 768px;
+$xl: 1024px;
+$laptop: 1366px;
+
+@mixin above($size...) {
+  @if length($size) ==1 {
+    @media screen and (min-width: nth($size, 1)) {
+      @content;
+    }
+  }
+
+  @if length($size) ==2 {
+    @media screen and (max-width: nth($size, 2) - 0.02px) and (min-width: nth($size, 1)) {
+      @content;
+    }
+  }
+}
+
+@mixin below($size...) {
+  @if length($size) ==1 {
+    @media screen and (max-width: nth($size, 1)) {
+      @content;
+    }
+  }
+
+  @if length($size) ==2 {
+    @media screen and (max-width: nth($size, 2) - 0.02px) and (min-width: nth($size, 1)) {
+      @content;
+    }
+  }
+}
+
+//!-------- Responsive design -----------------------------------------------------------

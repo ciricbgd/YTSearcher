@@ -1,0 +1,21 @@
+<div class="videoSurface noRecommended">
+  <app-video *ngIf="videoSrc.value"></app-video>
+  <app-recommended *ngIf="videoSrc.value"></app-recommended>
+  <app-comments *ngIf="videoSrc.value"></app-comments>
+  <div class="moreVideos">
+    <div
+      class="anotherVideo"
+      *ngFor="let video of moreVideos | async"
+      (click)="changeVideo(video?.id)"
+      data-id="{{ video?.id }}"
+    >
+      <img
+        [src]="video?.snippet?.thumbnails.medium.url"
+        [alt]="video?.snippet?.title"
+        width="auto"
+        heigt="100px"
+      />
+      <h5>{{ video?.snippet?.title }}</h5>
+    </div>
+  </div>
+</div>

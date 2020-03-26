@@ -1,0 +1,12 @@
+<!-- <h2>What are you in the mood for?</h2> -->
+
+<div class="categories">
+  <button
+    class="categoryBtn"
+    *ngFor="let cat of categories"
+    data-id="{{ cat.id }}"
+    (click)="selectCategory(cat.id, cat.snippet.title)"
+  >
+    {{ cat.snippet.title }}
+  </button>
+</div>

@@ -1,0 +1,13 @@
+@import '../../vars';
+.recommendedHolder {
+  .recommend {
+    margin-top: 20px;
+    cursor: pointer;
+    p {
+    }
+    img {
+      width: 100%;
+      border: 3px solid $bgcolor2;
+    }
+  }
+}

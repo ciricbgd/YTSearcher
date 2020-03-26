@@ -1,1 +1,72 @@
-/* You can add global styles to this file, and also import other style files */
+@import './vars';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+
+  font-family: $font1;
+  color: $color1;
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  background-color: $bgcolor1;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+//Inline-block
+.inline-block {
+  display: inline-block;
+}
+
+//Clickable stuff
+.clickable {
+  cursor: pointer;
+}
+
+//Floats
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.clear-after {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+Headers h1,
+h2,
+h3,
+h3,
+h5,
+h6 {
+  color: $color3;
+}

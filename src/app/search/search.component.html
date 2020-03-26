@@ -1,0 +1,45 @@
+<form [formGroup]="myForm" (submit)="searchVideo()">
+  <div class="form-group">
+    <input type="text" formControlName="STRING" placeholder="Search" />
+    <button type="submit">GO</button>
+  </div>
+  <div class="form-group">
+    <p>Region</p>
+    <select formControlName="REGION">
+      <option value="US">US</option>
+      <option value="RS">RS</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <p>Maximum results</p>
+    <input type="string" formControlName="MAXRESULTS" />
+  </div>
+  <!-- <div class="form-group">
+    <p>Video duration</p>
+    <select formControlName="DURATION">
+      <option value="any">any</option>
+      <option value="short">short</option>
+      <option value="medium">medium</option>
+      <option value="long">long</option>
+    </select>
+  </div> -->
+  <div class="form-group">
+    <p>Oder of videos</p>
+    <select formControlName="ORDER">
+      <option value="date">date</option>
+      <option value="rating">rating</option>
+      <option value="relevance">relevance</option>
+      <option value="title">title</option>
+      <option value="videoCount">videoCount</option>
+      <option value="viewCount">viewCount</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <p>Safe search</p>
+    <select formControlName="SAFE">
+      <option value="none">none</option>
+      <option value="moderate">moderate</option>
+      <option value="strict">strict</option>
+    </select>
+  </div>
+</form>

@@ -1,0 +1,20 @@
+<section class="ytVideo" *ngIf="video.src.source._value != null">
+  <h2>{{ video.title }}</h2>
+  <h5 class="clearAfter">
+    <a
+      href="https://www.youtube.com/channel/{{ video.channelId }}"
+      target="_blank"
+      >{{ video.channelTitle }}</a
+    >
+    <span style="text-align:right; opacity:0.5">
+      {{ video.publishedAt | date: 'd. MMMM yyyy. ' }}
+      {{ video.publishedAt | date: 'hh:mm aaa' }}
+    </span>
+  </h5>
+
+  <iframe width="320" height="315" [src]="video.src.source._value"> </iframe>
+  <div class="videoDescription clearAfter">
+    <p class="toColapse float-left">{{ video.description }}</p>
+    <!-- <button type="button" class="float-right colapseBtn"></button> -->
+  </div>
+</section>

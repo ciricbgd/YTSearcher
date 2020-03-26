@@ -1,0 +1,16 @@
+<div class="commentsHolder">
+  <div class="comment" *ngFor="let comment of comments | async">
+    <img
+      [src]="comment?.snippet?.topLevelComment.snippet.authorProfileImageUrl"
+      [alt]="comment?.snippet?.topLevelComment.snippet.authorDisplayName"
+      width="50"
+      heigt="50"
+    />
+    <p class="commentText">
+      <a [href]="comment?.snippet?.topLevelComment.snippet.authorChannelUrl">
+        {{ comment?.snippet?.topLevelComment.snippet.authorDisplayName }} </a
+      ><br />
+      {{ comment?.snippet?.topLevelComment.snippet.textOriginal }}
+    </p>
+  </div>
+</div>

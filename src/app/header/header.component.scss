@@ -1,0 +1,94 @@
+@import '../../vars';
+
+.header-holder {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+
+header {
+  position: relative;
+
+  .mainHeader {
+    text-align: center;
+    //margin-top: 60px;
+    //margin-bottom: 120px;
+    font-size: 7rem;
+    font-style: italic;
+    position: relative;
+    z-index: 2;
+
+    color: $color2;
+
+    //background: -webkit-linear-gradient(lighten($bgcolor2, 20), $bgcolor1);
+    //-webkit-background-clip: text;
+    //-webkit-text-fill-color: transparent;
+  }
+
+  .underline {
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+
+    width: 700px;
+    height: 10px;
+    z-index: 1;
+
+    background: linear-gradient(to right, $bgcolor2, lighten($bgcolor2, 8));
+    //background-color: lighten($bgcolor2, 8);
+
+    $x-increment: 2%;
+    $x-base: -42%;
+
+    $y-increment: 13px;
+    $y-base: -120px;
+
+    &:nth-of-type(1) {
+      transform: translate($x-base, $y-base);
+    }
+    &:nth-of-type(2) {
+      transform: translate(
+        calc(#{$x-base} - #{$x-increment * (2-1)}),
+        calc(#{$y-base} + #{$y-increment * (2-1)})
+      );
+    }
+    &:nth-of-type(3) {
+      transform: translate(
+        calc(#{$x-base} - #{$x-increment * (3-1)}),
+        calc(#{$y-base} + #{$y-increment * (3-1)})
+      );
+    }
+    &:nth-of-type(4) {
+      transform: translate(
+        calc(#{$x-base} - #{$x-increment * (4-1)}),
+        calc(#{$y-base} + #{$y-increment * (4-1)})
+      );
+    }
+    &:nth-of-type(5) {
+      transform: translate(
+        calc(#{$x-base} - #{$x-increment * (5-1)}),
+        calc(#{$y-base} + #{$y-increment * (5-1)})
+      );
+    }
+    &:nth-of-type(6) {
+      transform: translate(
+        calc(#{$x-base} - #{$x-increment * (6-1)}),
+        calc(#{$y-base} + #{$y-increment * (6-1)})
+      );
+    }
+    &:nth-of-type(7) {
+      transform: translate(
+        calc(#{$x-base} - #{$x-increment * (7-1)}),
+        calc(#{$y-base} + #{$y-increment * (7-1)})
+      );
+    }
+    &:nth-of-type(8) {
+      transform: translate(
+        calc(#{$x-base} - #{$x-increment * (8-1)}),
+        calc(#{$y-base} + #{$y-increment * (8-1)})
+      );
+    }
+  }
+}
